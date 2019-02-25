@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9dc1483d-af98-4ff0-97fc-013b10bfd501" name="Default Changelist" comment="" />
+    <list default="true" id="9dc1483d-af98-4ff0-97fc-013b10bfd501" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-debug (2).apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/base/TestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/config/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/Addpost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/CarouselPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/DiscoverPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/FeedPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/FormloginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/NotifPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/OnboardingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/pages/ProfilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/util/NavigationBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/util/ScrollDown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/util/ScrollUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/intern/util/TestUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/intern/testcases/TestCaseMix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/android.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/base/TestBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/Addpost.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/CarouselPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/DiscoverPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/FeedPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/FormloginPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/HomePage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/NotifPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/OnboardingPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/pages/ProfilePage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/util/NavigationBar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/util/ScrollDown.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/util/ScrollUp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/intern/util/TestUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/intern/testcases/TestCaseMix.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,6 +118,9 @@
       <dir>C:\Users\AURA\IdeaProjects\android\src\main\java\com\intern\pages</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -110,12 +153,13 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="697" />
     <option name="height" value="775" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
