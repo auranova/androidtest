@@ -1,5 +1,6 @@
 package com.intern.testcases;
 
+import com.github.javafaker.Faker;
 import com.intern.base.TestBase;
 import com.intern.pages.*;
 import com.intern.util.NavigationBar;
@@ -24,6 +25,9 @@ public class TestCaseMix extends TestBase {
     private ScrollDown scrollDown;
     private ScrollUp scrollUp;
     private Addpost addpost;
+    private CategoryPage categoryPage;
+    private EditorPage editorPage;
+    private Faker faker;
 
     public TestCaseMix() {
         super();
@@ -44,6 +48,9 @@ public class TestCaseMix extends TestBase {
         scrollDown = new ScrollDown();
         scrollUp = new ScrollUp();
         addpost = new Addpost();
+        categoryPage = new CategoryPage();
+        editorPage = new EditorPage();
+        faker = new Faker();
     }
 
     @AfterMethod
@@ -59,6 +66,17 @@ public class TestCaseMix extends TestBase {
         onboardingPage.tapLoginBtn();
         formloginPage.prosesLogin(prop.getProperty("username"), prop.getProperty("password"));
         homePage.tapXBtn();
+        editorPage.tapEditorBtn();
+        editorPage.tapProduk2Btn();
+        editorPage.tapAddreviewBtn();
+        editorPage.setOverallRate();
+        editorPage.setPackagingRate();
+        editorPage.setPrice();
+        editorPage.setRepurchase();
+        editorPage.inputReview(faker.lorem().sentence(35));
+        editorPage.tapDoneBtn();
+        homePage.tapBackBtn();
+        homePage.tapBackBtn();
         notifPage.tapNotifBtn();
         homePage.tapBackBtn();
         notifPage.tapNotifBtn();
@@ -169,7 +187,7 @@ public class TestCaseMix extends TestBase {
         homePage.tapBackBtn();
         navigationBar.tabBtnNavHome();
         notifPage.tapNotifBtn();
-        notifPage.tapPostnotifBtn();
+          notifPage.tapPostnotifBtn();
         notifPage.tapComentBtn();
         notifPage.prosescoment("Tess");
         notifPage.tapPostcomentBtn();
