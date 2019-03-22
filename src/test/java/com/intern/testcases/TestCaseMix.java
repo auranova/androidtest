@@ -28,6 +28,7 @@ public class TestCaseMix extends TestBase {
     private CategoryPage categoryPage;
     private EditorPage editorPage;
     private Faker faker;
+    private Addproduk addproduk;
 
     public TestCaseMix() {
         super();
@@ -51,6 +52,7 @@ public class TestCaseMix extends TestBase {
         categoryPage = new CategoryPage();
         editorPage = new EditorPage();
         faker = new Faker();
+        addproduk = new Addproduk();
     }
 
     @AfterMethod
@@ -67,8 +69,10 @@ public class TestCaseMix extends TestBase {
         formloginPage.prosesLogin(prop.getProperty("username"), prop.getProperty("password"));
         homePage.tapXBtn();
         editorPage.tapEditorBtn();
-        editorPage.tapProduk2Btn();
+        editorPage.tapSelectProduk();
+        //editorPage.tapProduk1Btn();
         editorPage.tapAddreviewBtn();
+        Thread.sleep(3);
         editorPage.setOverallRate();
         editorPage.setPackagingRate();
         editorPage.setPrice();
@@ -81,6 +85,23 @@ public class TestCaseMix extends TestBase {
         homePage.tapBackBtn();
         notifPage.tapNotifBtn();
         homePage.tapBackBtn();
+        navigationBar.tabBtnNavPlus();
+        addproduk.tapAddprodukBtn();
+        addproduk.tapPhotoBtn();
+        addproduk.tapCaptureBtn();
+        addproduk.tapCeklisBtn();
+        addproduk.tapBrandnameBtn();
+        addproduk.tapSelectBrand();
+        addproduk.tapCategoryBtn();
+        addproduk.tapSkincareBtn();
+        addproduk.tapMaskBtn();
+        addproduk.tapMasksheetBtn();
+        addproduk.inputProductName("ProductTest");
+        scrollDown.ScrollDown();
+        addproduk.inputShade("Shadetest");
+        addproduk.inputDesc(faker.lorem().sentence(35));
+        addproduk.inputPrice(faker.number().digits(5));
+        addproduk.tapAddBtn();
         navigationBar.tabBtnNavPlus();
         addpost.tapAddpostBtn();
         addpost.tapTakephotoBtn();
@@ -187,7 +208,7 @@ public class TestCaseMix extends TestBase {
         homePage.tapBackBtn();
         navigationBar.tabBtnNavHome();
         notifPage.tapNotifBtn();
-          notifPage.tapPostnotifBtn();
+        notifPage.tapPostnotifBtn();
         notifPage.tapComentBtn();
         notifPage.prosescoment("Tess");
         notifPage.tapPostcomentBtn();
@@ -195,6 +216,7 @@ public class TestCaseMix extends TestBase {
         homePage.tapBackBtn();
         homePage.tapBackBtn();
         navigationBar.tabBtnNavProfile();
+        scrollDown.ScrollDown();
         profilePage.tapPostBtn();
         profilePage.tapOption();
         profilePage.tapDelete();
@@ -222,7 +244,7 @@ public class TestCaseMix extends TestBase {
         navigationBar.tabBtnNavFeed();
         navigationBar.tabBtnNavHome();
         notifPage.tapNotifBtn();
-        notifPage.tabBtnNavUser();
+        notifPage.tapSelectUser();
         notifPage.tapPostBtn();
         notifPage.tapLikeBtn();
         homePage.tapBackBtn();
@@ -245,7 +267,7 @@ public class TestCaseMix extends TestBase {
         notifPage.tapPostcomentBtn();
         homePage.tapBackBtn();
         homePage.tapBackBtn();
-        notifPage.tabBtnNavUser();
+        notifPage.tapSelectUser();
         notifPage.tapPostBtn();
         notifPage.tapLikeBtn();
         homePage.tapBackBtn();

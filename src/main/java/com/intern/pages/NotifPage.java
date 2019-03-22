@@ -7,6 +7,9 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+import java.util.Random;
+
 public class NotifPage extends TestBase {
     @AndroidFindBy(id = "com.fdbr.android.debug:id/toolbar_notification_button")
     MobileElement btnNotif;
@@ -26,8 +29,9 @@ public class NotifPage extends TestBase {
     MobileElement btnLike;
     @AndroidFindBy(id = "com.fdbr.android.debug:id/iv_picture")
     MobileElement btnPostnotif;
-    @AndroidFindBy (xpath = "//android.widget.TextView[@text='putwid2186']")
-    AndroidElement btnTabUser;
+    @AndroidFindBy(xpath = "//android.support.v7.widget.RecyclerView[@resource-id= 'com.fdbr.android.debug:id/rv_notifications']"+
+            "//android.widget.RelativeLayout//android.widget.ImageView[starts-with(@resource-id, 'com.fdbr.android.debug:id/civ_photo')]")
+    List<MobileElement> SelectUser;
     @AndroidFindBy(id = "com.fdbr.android.debug:id/toolbar_back_button")
     MobileElement btnBack;
 
@@ -44,6 +48,10 @@ public class NotifPage extends TestBase {
     public void tapComentBtn() {btnComent.click();}
     public void tapLikeBtn() {btnLike.click();}
     public void tapPostnotifBtn() {btnPostnotif.click();}
-    public void tabBtnNavUser() {btnTabUser.click();}
+    public void tapSelectUser() {
+        Random rnd = new Random();
+        int rndInt = rnd.nextInt(SelectUser.size());
+        SelectUser.get(rndInt).click();
+    }
     public void tapBackBtn() {btnBack.click();}
 }

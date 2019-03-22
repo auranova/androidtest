@@ -17,7 +17,7 @@ public class FormloginPage extends TestBase {
     public FormloginPage() { PageFactory.initElements(new AppiumFieldDecorator(driver),this); }
 
     public void prosesLogin(String uname, String password) {
-        txtFieldusername.sendKeys(uname);
+        txtFieldusername.   sendKeys(uname);
         txtFieldpassword.sendKeys(password);
         btnLogin.click();
     }

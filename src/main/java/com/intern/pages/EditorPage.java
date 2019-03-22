@@ -9,11 +9,15 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
 import java.util.Random;
 
 public class EditorPage extends TestBase {
     @AndroidFindBy(id = "com.fdbr.android.debug:id/item_editorchoice")
     MobileElement btnEditor;
+    @AndroidFindBy(xpath = "//android.support.v7.widget.RecyclerView[@resource-id= 'com.fdbr.android.debug:id/recycler_view']" +
+            "//android.widget.RelativeLayout//android.widget.TextView[starts-with(@resource-id, 'com.fdbr.android.debug:id/txt_brand')]")
+    List<MobileElement> SelectProduk;
     @AndroidFindBy(xpath = "//android.widget.RelativeLayout[@index='0']")
     AndroidElement btnProduk0;
     @AndroidFindBy(xpath = "//android.widget.RelativeLayout[@index='1']")
@@ -53,6 +57,11 @@ public class EditorPage extends TestBase {
 public EditorPage() { PageFactory.initElements(new AppiumFieldDecorator(driver),this); }
 
     public void tapEditorBtn() {btnEditor.click();}
+    public void tapSelectProduk(){
+        Random rnd = new Random();
+        int rndInt = rnd.nextInt(SelectProduk.size());
+        SelectProduk.get(rndInt).click();
+    }
     public void tapProduk0Btn() {btnProduk0.click();}
     public void tapProduk1Btn() {btnProduk1.click();}
     public void tapProduk2Btn() {btnProduk2.click();}
