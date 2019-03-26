@@ -169,7 +169,7 @@ public EditorPage() { PageFactory.initElements(new AppiumFieldDecorator(driver),
                 break;
         }
     }
-
+    public void tapReview() {reviewformpage.clear();}
     public void inputReview(String Review) {reviewformpage.sendKeys(Review);}
     public void tapDoneBtn() {btnDone.click();}
 }

@@ -29,6 +29,7 @@ public class TestCaseMix extends TestBase {
     private EditorPage editorPage;
     private Faker faker;
     private Addproduk addproduk;
+    private EditprofilePage editprofilePage;
 
     public TestCaseMix() {
         super();
@@ -53,6 +54,7 @@ public class TestCaseMix extends TestBase {
         editorPage = new EditorPage();
         faker = new Faker();
         addproduk = new Addproduk();
+        editprofilePage = new EditprofilePage();
     }
 
     @AfterMethod
@@ -69,6 +71,7 @@ public class TestCaseMix extends TestBase {
         formloginPage.prosesLogin(prop.getProperty("username"), prop.getProperty("password"));
         homePage.tapXBtn();
         editorPage.tapEditorBtn();
+        scrollDown.ScrollDown();
         editorPage.tapSelectProduk();
         //editorPage.tapProduk1Btn();
         editorPage.tapAddreviewBtn();
@@ -77,6 +80,7 @@ public class TestCaseMix extends TestBase {
         editorPage.setPackagingRate();
         editorPage.setPrice();
         editorPage.setRepurchase();
+        editorPage.tapReview();
         editorPage.inputReview(faker.lorem().sentence(35));
         editorPage.tapDoneBtn();
         homePage.tapBackBtn();
@@ -227,11 +231,6 @@ public class TestCaseMix extends TestBase {
         Thread.sleep(5000);
         scrollDown.ScrollDown();
         scrollDown.ScrollDown();
-        scrollDown.ScrollDown();
-        scrollDown.ScrollDown();
-        scrollDown.ScrollDown();
-        scrollDown.ScrollDown();
-        scrollDown.ScrollDown();
         feedPage.tapItemBtn();
         homePage.tapBackBtn();
         feedPage.tapUserBtn();
@@ -344,6 +343,11 @@ public class TestCaseMix extends TestBase {
         homePage.tapBackBtn();
         notifPage.tapNotifBtn();
         notifPage.tapUserBtn();
-        Thread.sleep(5000);
+        homePage.tapBackBtn();
+        homePage.tapBackBtn();
+        homePage.tapBackBtn();
+        navigationBar.tabBtnNavProfile();
+        editprofilePage.tapSettingBtn();
+        editprofilePage.tapLogoutBtn();
     }
 }

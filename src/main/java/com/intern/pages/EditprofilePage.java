@@ -14,6 +14,8 @@ public class EditprofilePage extends TestBase {
     MobileElement btnSetting;
     @AndroidFindBy(id = "com.fdbr.android.debug:id/rel_editprofile")
     MobileElement btnEditprofil;
+    @AndroidFindBy(id = "com.fdbr.android.debug:id/rel_logout")
+    MobileElement btnLogout;
     @AndroidFindBy(id = "com.fdbr.android.debug:id/img_profile")
     MobileElement btnPhoto;
     @AndroidFindBy(id = "com.fdbr.android.debug:id/capture_image_button")
@@ -155,4 +157,5 @@ public class EditprofilePage extends TestBase {
     public void tapSave2Btn() {btnSave2.click();}
     public void tapDoneBtn() {btnDone.click();}
     public void tapBackBtn() {btnBack.click();}
+    public void tapLogoutBtn() {btnLogout.click();}
 }
